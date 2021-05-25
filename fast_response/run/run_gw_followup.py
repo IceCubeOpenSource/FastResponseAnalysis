@@ -139,17 +139,6 @@ rg = ReportGenerator(args.name,trigger.iso,start.iso,stop.iso,results,
 rg.generate_gw_report()
 rg.make_pdf()
 
-#send slack message to chosen channel
-# url = "https://hooks.slack.com/services/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" # For Josh test channel
-# if args.role=='observation':
-#    roc  = 'https://hooks.slack.com/services/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' # For ROC
-#    link = 'https://icecube.wisc.edu/~rhussain/O3_followups/'+args.name+'/'+date+'_'+args.name+'_report.pdf'
-#    realtime = 'https://hooks.slack.com/services/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'
-#    s1 = slackbot('roc', 'gw_alert', roc)
-#    s2 = slackbot('realtime','GW Alert',realtime)
-#    s1.send_message("Neutrino Follow up for GW Event %s is complete.\nReport: <%s|link>" % (args.name,link), "gw")
-#    s2.send_message("Neutrino Follow up for GW Event %s is complete.\nReport: <%s|link>" % (args.name,link), "gw")
-
 # Check if any GFU events are available after the on-time window to
 # make sure we have considered all events in the window
 t3 = pythonTime.time()
